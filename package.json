@@ -1,0 +1,7 @@
+{
+  "name": "ContaLuz",
+  "version": "0.0.1",
+  "dependencies": {
+    "@aspnet/signalr-client/dist/src/HubConnection": "latest"
+  }
+}

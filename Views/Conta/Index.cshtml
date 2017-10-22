@@ -1,0 +1,41 @@
+@using System.Collections.Generic
+@using ContaLuz.Domain
+@using Microsoft.Azure.KeyVault.Models
+
+@model System.Collections.Generic.IEnumerable<ContaLuz.Domain.Conta>
+
+@{
+    ViewData["Title"] = "Conta Page";
+}
+
+<div class="container">
+    <h2>Contas</h2>
+    <p><a class="btn btn-success" asp-controller="Conta" asp-action="Create">Nova Conta</a></p>
+    <table class="table table-hover">
+        <thead>
+        <tr>
+            <th>Data Leitura</th>
+            <th>Num Leitura</th>
+            <th>Kw Gasto</th>
+            <th>Valor a Pagar</th>
+            <th>Data Pagamento</th>
+            <th>Média Consumo</th>
+            <th>Ações</th>
+        </tr>
+        </thead>
+        <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.DateLeitura</td>
+                <td>@item.NumLeitura</td>
+                <td>@item.KwGasto</td>
+                <td>@item.ValorPagar</td>
+                <td>@item.DataPagamento</td>
+                <td>@item.MediaConsumo</td>
+                <td><a asp-controller="Conta" asp-action="Update" asp-route-id="@item.Id">Alterar</a> | <a asp-controller="Conta" asp-action="Delete" asp-route-id="@item.Id">Deletar</a></td>
+            </tr>
+        }
+        </tbody>
+    </table>
+</div>

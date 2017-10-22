@@ -1,0 +1,54 @@
+@model ContaLuz.Models.ContaViewModel
+
+@{
+	ViewData["title"] = "Alterar Conta";
+}
+
+<div class="container" >
+	<form class="col-md-6" asp-action="Update" asp-controller="Conta" method="post">
+        
+		<div class="form-group">
+			<label for="Id">Id:</label>
+			<input type="number" asp-for="Id" value="@Model.Id" class="form-control disabled" id="Id">
+			<span asp-validation-for="Id" class="field-validation-error"></span>
+		</div>
+		
+		<div class="form-group">
+			<label for="DateLeitura">Data Leitura:</label>
+			<input type="date" asp-for="DateLeitura" value="@Model.DateLeitura" class="form-control" id="DateLeitura">
+			<span asp-validation-for="DateLeitura" class="field-validation-error"></span>
+		</div>
+        
+		<div class="form-group">
+			<label for="NumLeitura">Número Leitura:</label>
+			<input type="number" asp-for="NumLeitura" value="@Model.NumLeitura" class="form-control" id="NumLeitura">
+			<span asp-validation-for="NumLeitura" class="error"></span>
+		</div>
+        
+		<div class="form-group">
+			<label for="KwGasto">Kw Gasto:</label>
+			<input type="number" asp-for="KwGasto" value="@Model.KwGasto" class="form-control" id="KwGasto">
+			<span asp-validation-for="KwGasto" class="error"></span>
+		</div>
+        
+		<div class="form-group">
+			<label for="ValorPagar">Valor a Pagar:</label>
+			<input type="number" asp-for="ValorPagar" value="@Model.ValorPagar" class="form-control" id="ValorPagar">
+			<span asp-validation-for="ValorPagar" class="error"></span>
+		</div>
+        
+		<div class="form-group">
+			<label for="DataPagamento">Data de Pagamento:</label>
+			<input type="date" asp-for="DataPagamento" value="@Model.DataPagamento" class="form-control" id="DataPagamento">
+			<span asp-validation-for="DataPagamento" class="error"></span>
+		</div>
+        
+		<div class="form-group">
+			<label for="MediaConsumo">Média de Consumo:</label>
+			<input type="number" asp-for="MediaConsumo" value="@Model.MediaConsumo" class="form-control" id="MediaConsumo">
+			<span asp-validation-for="MediaConsumo" class="error"></span>
+		</div>
+       
+		<button type="submit" class="btn btn-success">Enviar</button>
+	</form>
+</div>
