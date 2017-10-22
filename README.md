@@ -1,7 +1,7 @@
 # Trabalho do tio cacio
 
 
-Antes de rodar os comandos do projeto, criar um banco chamado "ContaLuz" e trocar a connection string no appsettings.json
+Antes de rodar os comandos do projeto, criar um banco chamado "ContaLuz" (Sql Server) e trocar a connection string no appsettings.json
 ```json
 {
   "ConnectionStrings" : {
